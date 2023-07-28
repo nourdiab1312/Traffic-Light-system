@@ -1,19 +1,28 @@
-int pushButton=0;
+ int red=11;
+int yellow=6;
+int green=5;
 void setup()
 {
-  pinMode(13, OUTPUT);
-  pinMode(7,OUTPUT);
+ pinMode(red,OUTPUT);
+  pinMode(yellow,OUTPUT);
+  pinMode(green,OUTPUT);
 }
 
 void loop()
 {
-  pushButton=digitalRead(7);
-  if(pushButton==HIGH)
-  {
-  digitalWrite(13, HIGH);
-  }
-    else{
-  digitalWrite(13, LOW);
-    }
-  delay(10); 
+ digitalWrite(11,HIGH);
+  delay(1000);
+  digitalWrite(11,LOW);
+  delay(1000);
+  for(int i=0;i<3;i++){
+   digitalWrite(6,HIGH);
+  delay(1000);
+  digitalWrite(6,LOW);
+    delay(1000);}
+   digitalWrite(5,HIGH);
+  delay(1000);
+  digitalWrite(5,LOW);
+  delay(1000);
+  
+  
 }
